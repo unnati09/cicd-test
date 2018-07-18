@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F18470220FE858400163BC1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3F18470120FE858400163BC1 /* .travis.yml */; };
 		3F816E9E20FE5EFF0050F15A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F816E9D20FE5EFF0050F15A /* AppDelegate.m */; };
 		3F816EA120FE5EFF0050F15A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F816EA020FE5EFF0050F15A /* ViewController.m */; };
 		3F816EA420FE5EFF0050F15A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F816EA220FE5EFF0050F15A /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F18470120FE858400163BC1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		3F816E9920FE5EFF0050F15A /* cicd-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cicd-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F816E9C20FE5EFF0050F15A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F816E9D20FE5EFF0050F15A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		3F816E9020FE5EFF0050F15A = {
 			isa = PBXGroup;
 			children = (
+				3F18470120FE858400163BC1 /* .travis.yml */,
 				3F816E9B20FE5EFF0050F15A /* cicd-test */,
 				3F816EB420FE5F000050F15A /* cicd-testTests */,
 				3F816EBF20FE5F000050F15A /* cicd-testUITests */,
@@ -237,6 +240,7 @@
 			files = (
 				3F816EA920FE5EFF0050F15A /* LaunchScreen.storyboard in Resources */,
 				3F816EA620FE5EFF0050F15A /* Assets.xcassets in Resources */,
+				3F18470220FE858400163BC1 /* .travis.yml in Resources */,
 				3F816EA420FE5EFF0050F15A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +437,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SNZ8X3UFW;
 				INFOPLIST_FILE = "cicd-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,6 +447,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nascentdigital.cicd-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -449,7 +456,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SNZ8X3UFW;
 				INFOPLIST_FILE = "cicd-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nascentdigital.cicd-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
