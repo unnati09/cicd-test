@@ -16,3 +16,4 @@ before_install:
   - echo $encrypted_18cf317e13f3_iv
   - echo $encrypted_18cf317e13f3_key
   - openssl aes-256-cbc -k password_key -in certs.tar.enc -out certs.tar -d
+  - tar xvf certs.tar
