@@ -4,3 +4,15 @@ install:
 - bundle install
 script:
 - fastlane beta
+before_script:
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/cicdadhocdistributionprofile.mobileprovision.enc -d -a -out scripts/profile/cicdadhocdistributionprofile.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
+- ./scripts/add-key.sh
+env:
+  global:
+  - APP_NAME="cicd-test"
+  - 'DEVELOPER_NAME="iPhone Distribution: Nascent Digital Experiences Inc (9SNZ8X3UFW)"'
+  - PROFILE_NAME="cicdadhocdistributionprofile"
+  - secure: FpNsqZJdUxScvH2rdNhbWHpHjRbQV4GZYGqmtjXipsOC7+X5L/nbW9SI7yGaMZ6xUhBcZi1cPEaQcxolHZOlKr7NyYH/EodbHgHhH5EK6z37aXtCXJKiIVdY1IRsindyNlqekZBki9utu7dQoCz++mxodElggbwhbYrqJW/mDWJP7TUs/IUOEmdKH37xVl7BEQ51xNt9wvL0m9U295QtJqAYLVAII5pABqtmGFgjkH/iF8AJ22h5rMH8hIruPdUsC7BzpFtICluj8ZByFKY0OHtjo0aSrM7Bo45b2A9f2AdOS27YGlnAJUDUHTKkLcKt+yfPhFPxDtg9ddWVIC6QjUaRKQhp//eWazspRx6IVn3n0zvnRjP/m8sYq9Iuxg61cHDdJ7cOSDFN1jYtwdyk1y7efhz7mkvdJti0Wag8KC1CHmCYZPbeSDklR4qFw+HCGJMRlcWRhPIsPTQwrJSufpcDwQyidkK5Xy4hyJ4Dw/Ed7b/C5xZHnMXJ0GduCPxRQ6cUf8hLCUnRPUdt6ismtW2MScrpyFVzJI6JYyBONLNlN7zsHhOZ14M2xT+sTnamNRjljjKNcN5F2StgARZT1DsytlY3Htz6RE47F5rIHKqWq1tN6B+QTOFjOLNIrCN3gLcC1GFCJBIaWTTxs939OaP2rQ586uKZ3MN4Vwt0NmY=
+  - secure: lCYA4dcJljxPYia9NT94RC6yJc0ccYo2hlciyi9zzXS7uiqMepMIZvguPXZEa9KRaHWgXdLovK2IjomuWPwfvV9nZKpU4skAE/JFbBTBV/W7JFYGtQyfaKRmF3H4kTgXl1mk8up0RGdYjyyaQEy8bbOKJ/CxxYw7+e8H+gNN5HE7VkKr4Z9TmU9Ij+3II7OTeAf4fM5CGuQQC2bsU79UjHWg0lPJm5vhvOwAL+/gW1jKg8xxFGRn3YI+7JWp3IJnDljjm4n5wn9qk1Zz2TOn2EqAxleEcHVzNSWSuf8RJBunbdJbY/Dbqf6BL2u9wk2AVp9+ceWILkf9NpHzg26+iQ6UU1lC6djnP6xmTbbzBjO28uwOBbDRvteYkS7eXnhD0hc6Z6ywGKCxNQu1FziHIqBeCMkGFZag2xx2YEOkU5GO+PS9hd8pgASQu283aSrpRPL+dkjFFJwKX2kCC6WUMO7fiqjtrNbCv7Rg0VreBp9pl2tdwjd69Mf4Lbjs0yEfFledWcQcuh67PuDpm5E0DvjnkcsTXGP1w2qSVw9eJ+q7BLZgUdknLOFdexNMJYlKlPwLnBT680oEHPUH/j/uJsjbpFZra6m7fkWWiAh7+uQNTZx1JyE+3+2RR+DTyT5UK60SQ6cw1yEa/iD3YTfVZ58OsXLbmMeslMpckzjSWO0=
