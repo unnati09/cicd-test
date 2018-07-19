@@ -469,8 +469,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nascentdigital.cicdtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "470039a9-7d72-4bd2-a11b-6590a685e2ae";
-				PROVISIONING_PROFILE_SPECIFIER = cicdtestdistributionprofile;
+				PROVISIONING_PROFILE = "ed3bc2a6-fe25-47ef-b4e6-7a83cd02bcda";
+				PROVISIONING_PROFILE_SPECIFIER = cicdadhocdistributionprofile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
