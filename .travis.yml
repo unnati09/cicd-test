@@ -5,14 +5,17 @@ install:
 script:
 - fastlane beta
 before_script:
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/cicdadhocdistributionprofile.mobileprovision.enc -d -a -out scripts/profile/cicdadhocdistributionprofile.mobileprovision
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
-- ./scripts/add-key.sh
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/cicdadhocdistributionprofile.mobileprovision.enc
+  -d -a -out scripts/profile/cicdadhocdistributionprofile.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a
+  -out scripts/certs/dist.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a
+  -out scripts/certs/dist.p12
+- "./scripts/add-key.sh"
 env:
   global:
   - APP_NAME="cicd-test"
   - 'DEVELOPER_NAME="iPhone Distribution: Nascent Digital Experiences Inc (9SNZ8X3UFW)"'
   - PROFILE_NAME="cicdadhocdistributionprofile"
-  - secure: FpNsqZJdUxScvH2rdNhbWHpHjRbQV4GZYGqmtjXipsOC7+X5L/nbW9SI7yGaMZ6xUhBcZi1cPEaQcxolHZOlKr7NyYH/EodbHgHhH5EK6z37aXtCXJKiIVdY1IRsindyNlqekZBki9utu7dQoCz++mxodElggbwhbYrqJW/mDWJP7TUs/IUOEmdKH37xVl7BEQ51xNt9wvL0m9U295QtJqAYLVAII5pABqtmGFgjkH/iF8AJ22h5rMH8hIruPdUsC7BzpFtICluj8ZByFKY0OHtjo0aSrM7Bo45b2A9f2AdOS27YGlnAJUDUHTKkLcKt+yfPhFPxDtg9ddWVIC6QjUaRKQhp//eWazspRx6IVn3n0zvnRjP/m8sYq9Iuxg61cHDdJ7cOSDFN1jYtwdyk1y7efhz7mkvdJti0Wag8KC1CHmCYZPbeSDklR4qFw+HCGJMRlcWRhPIsPTQwrJSufpcDwQyidkK5Xy4hyJ4Dw/Ed7b/C5xZHnMXJ0GduCPxRQ6cUf8hLCUnRPUdt6ismtW2MScrpyFVzJI6JYyBONLNlN7zsHhOZ14M2xT+sTnamNRjljjKNcN5F2StgARZT1DsytlY3Htz6RE47F5rIHKqWq1tN6B+QTOFjOLNIrCN3gLcC1GFCJBIaWTTxs939OaP2rQ586uKZ3MN4Vwt0NmY=
-  - secure: lCYA4dcJljxPYia9NT94RC6yJc0ccYo2hlciyi9zzXS7uiqMepMIZvguPXZEa9KRaHWgXdLovK2IjomuWPwfvV9nZKpU4skAE/JFbBTBV/W7JFYGtQyfaKRmF3H4kTgXl1mk8up0RGdYjyyaQEy8bbOKJ/CxxYw7+e8H+gNN5HE7VkKr4Z9TmU9Ij+3II7OTeAf4fM5CGuQQC2bsU79UjHWg0lPJm5vhvOwAL+/gW1jKg8xxFGRn3YI+7JWp3IJnDljjm4n5wn9qk1Zz2TOn2EqAxleEcHVzNSWSuf8RJBunbdJbY/Dbqf6BL2u9wk2AVp9+ceWILkf9NpHzg26+iQ6UU1lC6djnP6xmTbbzBjO28uwOBbDRvteYkS7eXnhD0hc6Z6ywGKCxNQu1FziHIqBeCMkGFZag2xx2YEOkU5GO+PS9hd8pgASQu283aSrpRPL+dkjFFJwKX2kCC6WUMO7fiqjtrNbCv7Rg0VreBp9pl2tdwjd69Mf4Lbjs0yEfFledWcQcuh67PuDpm5E0DvjnkcsTXGP1w2qSVw9eJ+q7BLZgUdknLOFdexNMJYlKlPwLnBT680oEHPUH/j/uJsjbpFZra6m7fkWWiAh7+uQNTZx1JyE+3+2RR+DTyT5UK60SQ6cw1yEa/iD3YTfVZ58OsXLbmMeslMpckzjSWO0=
+  - secure: hnkdDWfY2YRPv8nuAHUvBkXEBlrG2dhhH+EL0yqukoN/3P7obhIzJCIbDFrUh17jLrSdLr3K/+xoe0hPKWK6ZeZPYMidk1teHTGaYDpv+Iy5OePPV5T5MFOyaREppIQCuXCCSIX7bDMb070ODpcZADaKUWLhpkYoaFs6J8hTsiBTVFYG0iUccUsyXG1ctlY7jxUicAt4Gnq32QSxrUJQhdlke77jSkezs7kaHfrYrdOqqxZ4TL0aiYeWDOfhFL9M1SGv863o+5NiYwHmBibZJjhcfzlAF8BNtQvC3amIUN8LZkQDsU3Sx0w5Zq5JJEa6YpmHsHIx4M8XbpVx9RkP0hcCXa8WYb76nZ0e90azPBPezHPrjuAr4MoNztM2zr/HW5I50NDQBXYnUnBWf2zARLmL3qAG5eqKZO58bD7F/xwNqnrVHda93x3B7gz4XBmbkGNgtZsNmhwxbnQZffxThuQrTgF/Syw6UKrLiR1GYPOuHOOunMWixXlJZKbJ15FjoxdZACgUCNAve6fXe3CtvEu4S8YGWvpCtj87KQ1a3s3xdoTlGt7FYLaMtoOr7eP2aFv1NF4mgxeKsmWgGvGPhEXINXCGM3ID+O4KJ3MeEj6kIqZZPoa1yfbi2hjNBx5WZtLLc/zt/I8Mg3Xr6ZqOAwbhtIdpcyVvXnMOdL2xE/k=
+  - secure: gnC3xFwX26wS3AnRMMnaSusex6mVltOmZzrR2iwbGp/JMwt2u41zMty2vdu3s8HqpwIzsgY8Xspt7j0D4P9Qnf/EwZb+zLtxdfYLsK6XM1rqSvNQP/9dVPElbMN+Kfj4RtFpfvwBk6QFmUSkHr7RzDcWBi/QwXrrK5HAFZYNa8Q+rieVogfUj3znwvrhEjp+hN+yI3yowbqy+KpMDK07vuo0VsXxSKnEFSzkqrBWy8D+BiN3oNomWuWkjbl+HBxptcb9Hc2KwbqLjXetjGTeD5w9YzqGW/gGdf2Qh4ASYgtYbutRW44cFS/n6gpjy8y37ZUG2KsZK0m9JyeRpqT+NRWEJ4ENopF6KznLWqXfxERsRs/c4RXgQXKxatj3ZzbM2uEGsEtWHrBvf36uTzxyRz6ZaEHHOB9mUmHW+/lEkkvxCJuTFw4yww7vZiCBfLooahNt8EPtVxfMZYC/aRycVbOGf8fIM8pJ5NtRSATljUS/3WGyZdmxa07UyrwP8V8vzsHIZdI2oOhbCwl3OKOZzZNputGmUfz48WzsHrWptb1yxhLQyUclUNkmD74FMBxARAXoyfzyF4b2v2rshBw+hzNuN9qyNQgqvQjbtg0vyL1RbdOBJCYNwA+DU25yeRVjmnCq8jMNRl/XJwoBkfLa+0Mu/ApdCqFtNHcH86DlRbs=
