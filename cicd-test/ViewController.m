@@ -25,5 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (IBAction)crashButton:(UIButton *)sender {
+    NSAssert(1 == 2, @"1 does not equal 2");
+}
 @end

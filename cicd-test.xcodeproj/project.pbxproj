@@ -438,16 +438,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9SNZ8X3UFW;
 				INFOPLIST_FILE = "cicd-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nascentdigital.cicd-test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nascentdigital.cicdtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4c03be02-d419-43d4-8cf1-b97bfa286b33";
+				PROVISIONING_PROFILE_SPECIFIER = cicdtestdevelopmentprofile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -456,17 +458,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9SNZ8X3UFW;
 				INFOPLIST_FILE = "cicd-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nascentdigital.cicd-test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nascentdigital.cicdtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "470039a9-7d72-4bd2-a11b-6590a685e2ae";
+				PROVISIONING_PROFILE_SPECIFIER = cicdtestdistributionprofile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

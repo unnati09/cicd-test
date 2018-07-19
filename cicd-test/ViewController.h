@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+//- (IBAction)crashButton:(UIButton *)sender;
 
 @end
 
