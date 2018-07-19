@@ -153,6 +153,7 @@ playground.xcworkspace
 *.cer
 *.p12
 *.mobileprovision
+certs.tar
 
 ### Xcode ###
 # Xcode
