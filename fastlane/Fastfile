@@ -22,10 +22,7 @@ platform :ios do
   end
 
   lane :beta do
-  	build_app(
-        scheme: "cicd-test",
-        export_method: "ad-hoc"
-    )
+  	build_app(export_method: "ad-hoc")
     hockey(api_token: “74f8a6a194ee48dead825eb2fdf0554a”)
   end
 end
