@@ -8,6 +8,9 @@ before_script:
 - "./scripts/add-key.sh"
 env:
   global:
+  - APP_NAME=cicd-test
+  - DEVELOPER_NAME="iPhone Distribution: Nascent Digital Experiences Inc (9SNZ8X3UFW)"
+  - PROFILE_NAME=cicdadhocdistributionprofile
   - secure: WzeYEXDubLD9wfJhAn3HKVowcqu935WmA4XNJKD3uh3656dl+sb9WyvCY4ziDziX1W2qAV0n9H8Sbh9Exb45rJXD/mHP4seHnsKyQzx87AIVeM2FyDmvkDmWlJBq8ovVEo2PVBreOeLbDeypzLsveoGp7BN4O5qnTEwQNWe7nJHcc6L0dxmGHIMpb6FrsqBPUDRgfeKCTeZXxmfaw3b/j+hg+a5iGAHyntJPqdAkk/eqldyh84DAaXDhA68AY4ewUwc2iOt+ua+cSfLlURue9Zv+N6PnBsSZXdv/x+93xnHZhFNd+GDUVOvt5IgfEk3SPDuRPlJvxbEstmf2VGwTnKqxhDbsIAtoH3uFNWnpV95bKEMIDOwHJoMZaL05LJ1X7IsW0KnggfBIFLeEdDIJI/t63oLU9r3srvWyuqcJ0Va5Jb0QMELaI3EboWt+w3b4U0BNWlw5EWK4L1mnvfB19ObX2iI3iLVpvKyiSDGxDum3j5UwsxFTd49udsSlgFyHgbq3Jg/m4B3rYE/TDi7GmZ7lym/JtCPhFzrksL2jCeicpIidFhSJ5FBEYQF3xN9xKuK85t+4rFwslriolPzrXGEAx7QdO8tudxm9Oe2WNCZZ1NFmYqgq5Wc7fOy3eKdMuTN4wLZj5GsgJPVGNzwSZx1HErMlsmneKyYIX27+iVo=
 before_install:
 - openssl aes-256-cbc -K $encrypted_973c8b18b5b4_key -iv $encrypted_973c8b18b5b4_iv
