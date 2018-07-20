@@ -23,7 +23,7 @@ before_install:
 - echo $SOMEVAR
 - echo $SOME_OTHER_VAR
 - echo $TESTVAR
-- echo $LmDdEwbU
+- echo $vjPg
 - echo NEXT SHOULD WORK
 - echo $KEY_PASSWORD
 - openssl aes-256-cbc -k password_key -in certs.tar.enc -out certs.tar -d
