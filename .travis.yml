@@ -12,8 +12,10 @@ env:
   - 'DEVELOPER_NAME="iPhone Distribution: Nascent Digital Experiences Inc (9SNZ8X3UFW)"'
   - PROFILE_NAME="cicdadhocdistributionprofile"
   - KEY_PASSWORD="Password123"
+  - secure: jmftyu8S2QFH8pIJFIDTb/aFLbvssua4dvXirZ8B1q9b000HbX+NboyrCxE17Uz5XkXUxPC1xA/mzYU9IpHI9zO3x84x//LfmNOgJcT9Jdyp84WVjAQr4xy5HQWQTqlwRcfQ5Vy4vW2dLoUds9BnCDjjagCzHT7mPeRv9g+8PoPUfCGbw4+NO63DRI6ciuR6CBSOFkL5oaUpsmt2GVMhAG8S9zFPVI0QH5m2aDiEYM+/fb/tOQMRmVM+URaE4iNHJXMXNqDeD9xdsJ4822cXg07FuZpnjKbh3F6qvnGDQa2e2BKbtsY+uB+9cJbYIQCVHtMyHjTbdih/pjkS4MZM3moP8wvvoRoSn+DmQBnn23Z5Cv/gmaEn+QZrhOydX7NJVF3ojRvYVEVbfKrqTc8Q6LDRw9D/2lFpcW/hAYX+MxWLJutIGT7PEMNBzxHDzGOZjanCcXMKtSLEFk+6eWH38cgmlMukPOYIR9mFhB3LJXou8FWMStDOpQeOi5wGkIJFmE6tFj5Omu+5uawcVsQfrUfRPoIXn3IPeI6GxSWn4M2mSZdJ8zi9s+Kn28hBusINQewNClG/lkeN4DbECk+XfLUpCTyFPu3tPN3MXLQRd3qXg91ckGvwG9j8XTBCLKE63FfoKMup9nNO9TDxijgMNNTVJZgZT9rIDtkvSG8Fycg=
 before_install:
-  - echo $encrypted_18cf317e13f3_iv
-  - echo $encrypted_18cf317e13f3_key
-  - openssl aes-256-cbc -k password_key -in certs.tar.enc -out certs.tar -d
-  - tar xvf certs.tar
+- echo $encrypted_18cf317e13f3_iv
+- echo $encrypted_18cf317e13f3_key
+- echo $RANDOM_ENCRYPT
+- openssl aes-256-cbc -k password_key -in certs.tar.enc -out certs.tar -d
+- tar xvf certs.tar
