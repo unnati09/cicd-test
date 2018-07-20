@@ -22,9 +22,9 @@ platform :ios do
   end
 
   lane :beta do
-    disable_automatic_code_signing(path: ”cicd-test.xcodeproj")
+    disable_automatic_code_signing(path: "cicd-test.xcodeproj")
   	build_app(export_method: "ad-hoc")
-    enable_automatic_code_signing(path: ”cicd-test.xcodeproj")
-    hockey(api_token: “74f8a6a194ee48dead825eb2fdf0554a”)
+    enable_automatic_code_signing(path: "cicd-test.xcodeproj")
+    hockey(api_token: "74f8a6a194ee48dead825eb2fdf0554a")
   end
 end

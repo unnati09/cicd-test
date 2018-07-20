@@ -8,8 +8,13 @@ before_script:
 - "./scripts/add-key.sh"
 env:
   global:
-  - secure: CglA4bXaa/5MOWiwuChn5J95SIezmmH5Juyb0SbHs5hgtQgfaKB6zuGlQPBP/+Uz5ZfDUPs6dHWh33LxYCj6j+iSmXnCIxwi7hd3Gbml3PvZXFUs7x7UHORD2WjwaSxekE841P2NE2yt0F/pHIfki7/n7nl6+D7IE8RDOVyQLZ4RIWz4jtWj7zogA+DWXXDVhKb1gEbjDE/MixGsfYEjmXCSRjijC3sdzNrfKGwwfy+vxSqyXtlGReVflWAtRVCz+CGfHZ8E5F/w1IE0luTfu5CqQBoW5MlR6tB2G0FuZ2EU3YjfQFl0HcCwpZ4/00Q/USlBBNARVZsLFRuOIf4Q+Ykl+lzrAe1zz9AAXvKvQop6JLWvjsVcIBNTLX7QxP34DX3VSWDmSJfu215KrDM20m2HO70/xD4wLOpHQL/yn8m7e125X1dvKamv32ryhc/DJ1n5hxCnMwyNdtr5hDSV7vqBlro/Wk20FEnBasKb0o7BVhgSlZGAhxptnuVwtF+2aD375Mt4WmCxJQO9VwMY8wdQu8yNGicYX+D6ycfMArPvdzCmN6gkvgNvSagWu1InBZsyHFO26Khe1esexjbcYBaKT+sWD1GFnWS0SIKwaNEzhuXoTJWSzVfI6LJQ6t7Kp7VfbHvgKaWmU4vCV1Rm7opaQsB+kPWM5n5/qQPDZx4=
+  - APP_NAME=cicd-test
+  - DEVELOPER_NAME="iPhone Distribution: Nascent Digital Experiences Inc (9SNZ8X3UFW)"
+  - PROFILE_NAME=cicdadhocdistributionprofile
+  - KEY_PASSWORD=Password123
 before_install:
-- echo $WHYTHISNOTWORK
+- echo NEXT SHOULD WORK
+- echo $KEY_PASSWORD
+- travis version
 - openssl aes-256-cbc -k password_key -in certs.tar.enc -out certs.tar -d
 - tar xvf certs.tar
