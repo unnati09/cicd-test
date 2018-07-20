@@ -26,6 +26,6 @@
 }
 
 - (IBAction)crashButton:(UIButton *)sender {
-    NSAssert(1 == 2, @"1 does not equal 2");
+    @throw NSInternalInconsistencyException;
 }
 @end
