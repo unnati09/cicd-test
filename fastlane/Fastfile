@@ -25,4 +25,21 @@ platform :ios do
   	build_app(export_method: "ad-hoc")
     hockey(api_token: "74f8a6a194ee48dead825eb2fdf0554a")
   end
+
+  lane :master do 
+  	build_app(
+  		export_method: "ad-hoc",
+  		scheme: "cicd-test"
+  	)
+  	hockey(api_token: "74f8a6a194ee48dead825eb2fdf0554a")
+  end
+
+  lane :dev do
+  	build_app(
+  		export_method: "ad-hoc",
+  		scheme: "cicd-test dev"
+  	)
+    hockey(api_token: "74f8a6a194ee48dead825eb2fdf0554a")
+  end
+
 end

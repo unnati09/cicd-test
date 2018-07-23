@@ -3,7 +3,8 @@ osx_image: xcode9.4
 install:
 - bundle install
 script:
-- fastlane beta
+- if [ "$TRAVIS_BRANCH" = "master" ]; then fastlane master; fi
+- if [ "$TRAVIS_BRANCH" = "dev" ]; then fastlane dev; fi
 before_script:
 - "./scripts/add-key.sh"
 env:

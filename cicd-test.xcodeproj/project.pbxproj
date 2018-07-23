@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3F18470220FE858400163BC1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3F18470120FE858400163BC1 /* .travis.yml */; };
+		3F1847052106049500163BC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F816EA020FE5EFF0050F15A /* ViewController.m */; };
+		3F1847062106049500163BC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F816EAB20FE5EFF0050F15A /* main.m */; };
+		3F1847072106049500163BC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F816E9D20FE5EFF0050F15A /* AppDelegate.m */; };
+		3F18470A2106049500163BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F816EA720FE5EFF0050F15A /* LaunchScreen.storyboard */; };
+		3F18470B2106049500163BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F816EA520FE5EFF0050F15A /* Assets.xcassets */; };
+		3F18470C2106049500163BC1 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3F18470120FE858400163BC1 /* .travis.yml */; };
+		3F18470D2106049500163BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F816EA220FE5EFF0050F15A /* Main.storyboard */; };
 		3F816E9E20FE5EFF0050F15A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F816E9D20FE5EFF0050F15A /* AppDelegate.m */; };
 		3F816EA120FE5EFF0050F15A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F816EA020FE5EFF0050F15A /* ViewController.m */; };
 		3F816EA420FE5EFF0050F15A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F816EA220FE5EFF0050F15A /* Main.storyboard */; };
@@ -37,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		3F18470120FE858400163BC1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		3F1847112106049500163BC1 /* cicd-test dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cicd-test dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1847122106049500163BC1 /* cicd-test copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "cicd-test copy-Info.plist"; path = "/Users/jeremy/work/cicd-test/cicd-test copy-Info.plist"; sourceTree = "<absolute>"; };
 		3F816E9920FE5EFF0050F15A /* cicd-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cicd-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F816E9C20FE5EFF0050F15A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F816E9D20FE5EFF0050F15A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3F1847082106049500163BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F816E9620FE5EFF0050F15A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +104,7 @@
 				3F816EB420FE5F000050F15A /* cicd-testTests */,
 				3F816EBF20FE5F000050F15A /* cicd-testUITests */,
 				3F816E9A20FE5EFF0050F15A /* Products */,
+				3F1847122106049500163BC1 /* cicd-test copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +114,7 @@
 				3F816E9920FE5EFF0050F15A /* cicd-test.app */,
 				3F816EB120FE5F000050F15A /* cicd-testTests.xctest */,
 				3F816EBC20FE5F000050F15A /* cicd-testUITests.xctest */,
+				3F1847112106049500163BC1 /* cicd-test dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +156,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3F1847032106049500163BC1 /* cicd-test dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F18470E2106049500163BC1 /* Build configuration list for PBXNativeTarget "cicd-test dev" */;
+			buildPhases = (
+				3F1847042106049500163BC1 /* Sources */,
+				3F1847082106049500163BC1 /* Frameworks */,
+				3F1847092106049500163BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cicd-test dev";
+			productName = "cicd-test";
+			productReference = 3F1847112106049500163BC1 /* cicd-test dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3F816E9820FE5EFF0050F15A /* cicd-test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F816EC520FE5F000050F15A /* Build configuration list for PBXNativeTarget "cicd-test" */;
@@ -229,11 +264,23 @@
 				3F816E9820FE5EFF0050F15A /* cicd-test */,
 				3F816EB020FE5F000050F15A /* cicd-testTests */,
 				3F816EBB20FE5F000050F15A /* cicd-testUITests */,
+				3F1847032106049500163BC1 /* cicd-test dev */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3F1847092106049500163BC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F18470A2106049500163BC1 /* LaunchScreen.storyboard in Resources */,
+				3F18470B2106049500163BC1 /* Assets.xcassets in Resources */,
+				3F18470C2106049500163BC1 /* .travis.yml in Resources */,
+				3F18470D2106049500163BC1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F816E9720FE5EFF0050F15A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +309,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3F1847042106049500163BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1847052106049500163BC1 /* ViewController.m in Sources */,
+				3F1847062106049500163BC1 /* main.m in Sources */,
+				3F1847072106049500163BC1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F816E9520FE5EFF0050F15A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +380,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3F18470F2106049500163BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9SNZ8X3UFW;
+				INFOPLIST_FILE = "cicd-test dev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nascentdigital.cicdtest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4c03be02-d419-43d4-8cf1-b97bfa286b33";
+				PROVISIONING_PROFILE_SPECIFIER = cicdtestdevelopmentprofile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F1847102106049500163BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9SNZ8X3UFW;
+				INFOPLIST_FILE = "cicd-test dev-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nascentdigital.cicdtest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ed3bc2a6-fe25-47ef-b4e6-7a83cd02bcda";
+				PROVISIONING_PROFILE_SPECIFIER = cicdadhocdistributionprofile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3F816EC320FE5F000050F15A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -548,6 +647,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F18470E2106049500163BC1 /* Build configuration list for PBXNativeTarget "cicd-test dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F18470F2106049500163BC1 /* Debug */,
+				3F1847102106049500163BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3F816E9420FE5EFF0050F15A /* Build configuration list for PBXProject "cicd-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
