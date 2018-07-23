@@ -393,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nascentdigital.cicdtest-dev";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nascentdigital.cicdtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4c03be02-d419-43d4-8cf1-b97bfa286b33";
 				PROVISIONING_PROFILE_SPECIFIER = cicdtestdevelopmentprofile;
@@ -414,7 +414,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nascentdigital.cicdtest-dev";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nascentdigital.cicdtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ed3bc2a6-fe25-47ef-b4e6-7a83cd02bcda";
 				PROVISIONING_PROFILE_SPECIFIER = cicdadhocdistributionprofile;
